@@ -1,0 +1,38 @@
+//Colors
+
+$veryDarkBlue: hsl(243, 87%, 12%);
+$desaturetedBlue: hsl(238, 22%, 44%);
+$brightBlue: hsl(224, 93%, 58%);
+$moderateCyan: hsl(170, 45%, 43%);
+$lightGrayishBlue: hsl(240, 75%, 98%);
+$lightGray: hsl(0, 0%, 75%);
+
+//fonts
+$primaryFont: "Raleway", sans-serif;
+$bodyFont: "Open sans", sans-serif;
+
+* {
+  font-family: $primaryFont;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: calc(12px + 1.05vw);
+  font-size: calc(12px + 1vw);
+}
+
+.wrapper {
+  padding: 0px 70px 0px 70px;
+}
+//Breakpoints
+
+$breakpoints: (
+  small: 600px
+);
+
+@mixin breakpoint($size) {
+  $breakpoint-value: map-get($breakpoints, $size);
+
+  @media screen and (max-width: $breakpoint-value) {
+    @content;
+  }
+}

@@ -1,0 +1,130 @@
+.stay-productive {
+  padding: 150px 50px 0 50px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  grid-template-areas: "left-column image-col-2";
+  margin-top: 200px;
+  background-color: $lightGrayishBlue;
+  @include breakpoint(small) {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-areas:
+      "image-col-2 "
+      "left-column ";
+    padding: 10px 20px 0px 20px;
+  }
+
+  &::before {
+    content: "";
+    height: 10vh;
+    width: 100%;
+    background-image: url(/images/bg-curve-desktop.svg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: -50px;
+    @include breakpoint(small) {
+      background-image: url(/images/bg-curve-mobile.svg);
+      background-position: center;
+      background-size: cover;
+      height: 9vh;
+    }
+  }
+  .image-col-2 {
+    width: 100%;
+    padding: 25px;
+    grid-area: image-col-2;
+    @include breakpoint(small) {
+      width: 90vw;
+    }
+  }
+  .left-column {
+    grid-area: left-column;
+  }
+  .text-container {
+    width: 100%;
+    @include breakpoint(small) {
+      margin: auto;
+    }
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 25px;
+    @include breakpoint(small) {
+      text-align: center;
+    }
+  }
+  p {
+    font-size: 0.7rem;
+    line-height: 1.4;
+    margin-bottom: 30px;
+  }
+
+  .cta-green {
+    display: inline-block;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: $moderateCyan;
+      padding-bottom: 5px;
+      font-size: 0.7rem;
+    }
+    .icon-arrow {
+      width: 22px;
+      height: 22px;
+      vertical-align: bottom;
+    }
+
+    hr {
+      border: 1px solid $moderateCyan;
+    }
+  }
+  .testimonial {
+    margin: 70px 0 100px 10px;
+    padding: 25px 20px 0px 20px;
+    width: 60%;
+    box-shadow: 0px 0px 5px #888888;
+    background-color: #fff;
+    position: relative;
+    @media screen and (max-width: 800px) {
+      margin: 40px auto 20px auto;
+      width: 80%;
+    }
+
+    .p-card {
+      font-size: 0.7rem;
+      margin-bottom: 10px;
+    }
+    .avatar {
+      border-radius: 50%;
+      grid-area: picture;
+      justify-self: left;
+      align-self: center;
+      height: 30px;
+    }
+
+    .container {
+      display: inline-block;
+
+      // grid-template-columns: repeat(auto-fit, minmax(50px 200px));
+      // grid-template-areas:
+      //  "picture name"
+      //  "picture info";
+      //grid-template-rows: repeat(2, (35px));
+      //grid-gap: 9px;
+      //height: 60px;
+
+      .cust-name {
+        font-weight: 800;
+        margin-bottom: 0;
+      }
+      .cust-design {
+        font-family: $bodyFont;
+        font-size: 0.6rem;
+      }
+    }
+  }
+}
