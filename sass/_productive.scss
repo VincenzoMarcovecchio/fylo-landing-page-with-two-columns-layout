@@ -1,17 +1,18 @@
 .stay-productive {
-  padding: 150px 50px 0 50px;
+  padding: 150px 70px 0 70px;
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, minmax(240px, 1fr));
   grid-template-areas: "left-column image-col-2";
   margin-top: 200px;
-  background-color: $lightGrayishBlue;
+  background-color: #f8f8fe;
   @include breakpoint(small) {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-template-areas:
       "image-col-2 "
       "left-column ";
-    padding: 10px 20px 0px 20px;
+    padding: 0px 20px 0px 20px;
+    margin-top: 150px;
   }
 
   &::before {
@@ -32,10 +33,10 @@
   }
   .image-col-2 {
     width: 100%;
-    padding: 25px;
+
     grid-area: image-col-2;
     @include breakpoint(small) {
-      width: 90vw;
+      margin: 80px 0 80px 0;
     }
   }
   .left-column {
@@ -43,9 +44,6 @@
   }
   .text-container {
     width: 100%;
-    @include breakpoint(small) {
-      margin: auto;
-    }
   }
 
   h1 {
@@ -57,7 +55,7 @@
     }
   }
   p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     line-height: 1.4;
     margin-bottom: 30px;
   }
@@ -83,7 +81,7 @@
     }
   }
   .testimonial {
-    margin: 70px 0 100px 10px;
+    margin: 70px 0 100px 0px;
     padding: 25px 20px 0px 20px;
     width: 60%;
     box-shadow: 0px 0px 5px #888888;
@@ -94,16 +92,22 @@
       width: 80%;
     }
 
+    .quote {
+      height: 18px;
+      @include breakpoint(small) {
+        height: 12px;
+      }
+    }
     .p-card {
       font-size: 0.7rem;
       margin-bottom: 10px;
     }
     .avatar {
       border-radius: 50%;
-      grid-area: picture;
-      justify-self: left;
-      align-self: center;
-      height: 30px;
+      height: 40px;
+      @include breakpoint(small) {
+        height: 27px;
+      }
     }
 
     .container {
@@ -119,11 +123,16 @@
 
       .cust-name {
         font-weight: 800;
-        margin-bottom: 0;
+        margin: 0 0 0 3px;
+        font-size: 15px;
+        @include breakpoint(small) {
+          font-size: 11px;
+        }
       }
       .cust-design {
         font-family: $bodyFont;
         font-size: 0.6rem;
+        margin: 0 0 30px 3px;
       }
     }
   }

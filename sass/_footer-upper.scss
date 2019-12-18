@@ -65,6 +65,7 @@
       box-shadow: 0px 0px 2px $veryDarkBlue;
       @include breakpoint(small) {
         width: 100%;
+        font-size: 0.8rem;
       }
       &:hover {
         box-shadow: none;

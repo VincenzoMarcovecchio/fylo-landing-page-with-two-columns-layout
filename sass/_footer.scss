@@ -16,7 +16,7 @@
     .footer-logo {
       width: 150px;
       display: block;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
     a {
       font-size: 0.7rem;
@@ -85,27 +85,27 @@
 
 .fourth-col {
   padding-top: 80px;
-  width: 25%;
+  width: 23%;
   @include breakpoint(small) {
     width: 100%;
     text-align: center;
-
     margin-bottom: 30px;
     padding-top: 0;
   }
 
   i {
-    width: 2em;
+    width: 2.2em;
     font-size: 0.7em;
     text-align: center;
-    margin-right: 10px;
-    padding: 5px;
+    margin-right: 20px;
+    padding: 9px;
     color: #fff;
     border: 1px solid #fff;
     border-radius: 50%;
     transition: all 100ms ease-in-out;
     @include breakpoint(small) {
       font-size: 1rem;
+      margin-right: 35px;
     }
     &:hover {
       background-color: #fff;

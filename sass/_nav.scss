@@ -3,9 +3,9 @@ nav {
   align-items: center;
   justify-content: space-between;
   font-family: $primaryFont;
-  padding: 50px 65px 0px 65px;
+  padding: 60px 70px 0px 70px;
   @include breakpoint(small) {
-    padding: 30px 25px 20px 25px;
+    padding: 40px 0px 70px 25px;
   }
 
   .logo {
@@ -21,7 +21,7 @@ nav {
   ul {
     list-style: none;
     display: flex;
-    width: 35%;
+    width: 45%;
     justify-content: space-evenly;
     @include breakpoint(small) {
       width: 60%;
@@ -30,6 +30,10 @@ nav {
       font-size: 0.7rem;
       text-decoration: none;
       color: $veryDarkBlue;
+
+      &:hover {
+        text-decoration: underline;
+      }
       @include breakpoint(small) {
         margin-right: 10px;
       }
