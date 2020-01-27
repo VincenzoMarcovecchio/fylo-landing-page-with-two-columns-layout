@@ -1,6 +1,5 @@
 .main-hero {
   padding: 100px 70px 0px 70px;
-  align-items: center;
   display: grid;
   grid-template-columns: repeat(2, minmax(240px, 1fr));
   font-family: $primaryFont;
@@ -20,7 +19,6 @@
 
   .text-area {
     width: 100%;
-
     grid-area: text-area;
 
     @include breakpoint(small) {
@@ -51,18 +49,20 @@
 .container1 {
   display: inline-flex;
   align-items: center;
-  width: 80%;
+  width: 90%;
   margin-top: 20px;
+  position: relative;
   @include breakpoint(small) {
     flex-direction: column;
   }
 
   input {
     height: 45px;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     padding: 10px;
     line-height: inherit;
     width: 80%;
+    min-width: 230px;
     margin-right: 20px;
     border-radius: 3px;
     border: 1px solid $lightGray;
@@ -70,18 +70,18 @@
     @include breakpoint(small) {
       width: 90%;
       margin-right: 0;
+      height: 35px;
     }
   }
   input::placeholder {
     color: $lightGray;
-    font-size: 0.6rem;
   }
   button {
+    cursor: pointer;
     padding: 2px 20px 2px 20px;
     white-space: nowrap;
     display: flex;
     justify-content: center;
-    width: 40%;
     height: 45px;
     background-color: $brightBlue;
     color: #fff;
@@ -94,6 +94,7 @@
       width: 90%;
       margin-top: 15px;
       font-size: 0.8rem;
+      height: 35px;
     }
 
     &:hover {

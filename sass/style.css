@@ -12,6 +12,33 @@
   padding: 0px 70px 0px 70px;
 }
 
+.email-address-error {
+  font-size: 0.68rem;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  margin: auto;
+  color: #ff5263 !important;
+  text-align: left;
+  margin-bottom: 80px;
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+@media screen and (max-width: 850px) {
+  .email-address-error {
+    top: 30px;
+    font-size: 0.68rem;
+    width: 90%;
+    margin: auto;
+    color: #ff5263;
+    text-align: left;
+  }
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,9 +106,6 @@ nav ul li a:hover {
 
 .main-hero {
   padding: 100px 70px 0px 70px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(240px, 1fr))[2];
@@ -151,8 +175,9 @@ nav ul li a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80%;
+  width: 90%;
   margin-top: 20px;
+  position: relative;
 }
 
 @media screen and (max-width: 600px) {
@@ -166,10 +191,11 @@ nav ul li a:hover {
 
 .container1 input {
   height: 45px;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   padding: 10px;
   line-height: inherit;
   width: 80%;
+  min-width: 230px;
   margin-right: 20px;
   border-radius: 3px;
   border: 1px solid #bfbfbf;
@@ -179,30 +205,28 @@ nav ul li a:hover {
   .container1 input {
     width: 90%;
     margin-right: 0;
+    height: 35px;
   }
 }
 
 .container1 input::-webkit-input-placeholder {
   color: #bfbfbf;
-  font-size: 0.6rem;
 }
 
 .container1 input:-ms-input-placeholder {
   color: #bfbfbf;
-  font-size: 0.6rem;
 }
 
 .container1 input::-ms-input-placeholder {
   color: #bfbfbf;
-  font-size: 0.6rem;
 }
 
 .container1 input::placeholder {
   color: #bfbfbf;
-  font-size: 0.6rem;
 }
 
 .container1 button {
+  cursor: pointer;
   padding: 2px 20px 2px 20px;
   white-space: nowrap;
   display: -webkit-box;
@@ -211,7 +235,6 @@ nav ul li a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 40%;
   height: 45px;
   background-color: #3065f8;
   color: #fff;
@@ -228,6 +251,7 @@ nav ul li a:hover {
     width: 90%;
     margin-top: 15px;
     font-size: 0.8rem;
+    height: 35px;
   }
 }
 
@@ -262,7 +286,7 @@ nav ul li a:hover {
   content: "";
   height: 10vh;
   width: 100%;
-  background-image: url(/images/bg-curve-desktop.svg);
+  background-image: url(../images/bg-curve-desktop.svg);
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -271,7 +295,7 @@ nav ul li a:hover {
 
 @media screen and (max-width: 600px) {
   .stay-productive::before {
-    background-image: url(/images/bg-curve-mobile.svg);
+    background-image: url(../images/bg-curve-mobile.svg);
     background-position: center;
     background-size: cover;
     height: 9vh;
@@ -422,7 +446,7 @@ nav ul li a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 70px 50px 50px 50px;
+    padding: 70px 30px 50px 30px;
   }
 }
 
@@ -454,12 +478,12 @@ nav ul li a:hover {
 @media screen and (max-width: 600px) {
   .footer-upper p {
     width: 100%;
-    text-align: center;
   }
 }
 
 .footer-upper .container2 {
   width: 70%;
+  position: relative;
 }
 
 @media screen and (max-width: 600px) {
@@ -480,22 +504,22 @@ nav ul li a:hover {
 
 .footer-upper .container2 input::-webkit-input-placeholder {
   color: #bfbfbf;
-  font-size: 0.6rem;
+  font-size: 0.9rem;
 }
 
 .footer-upper .container2 input:-ms-input-placeholder {
   color: #bfbfbf;
-  font-size: 0.6rem;
+  font-size: 0.9rem;
 }
 
 .footer-upper .container2 input::-ms-input-placeholder {
   color: #bfbfbf;
-  font-size: 0.6rem;
+  font-size: 0.9rem;
 }
 
 .footer-upper .container2 input::placeholder {
   color: #bfbfbf;
-  font-size: 0.6rem;
+  font-size: 0.9rem;
 }
 
 .footer-upper .container2 button {
@@ -519,12 +543,14 @@ nav ul li a:hover {
   border-radius: 3px;
   -webkit-box-shadow: 0px 0px 2px #070439;
           box-shadow: 0px 0px 2px #070439;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
   .footer-upper .container2 button {
     width: 100%;
     font-size: 0.8rem;
+    height: 35px;
   }
 }
 
@@ -615,7 +641,7 @@ nav ul li a:hover {
 
 @media screen and (max-width: 600px) {
   .second-col ul a {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-bottom: 30px;
   }
 }
@@ -644,7 +670,7 @@ nav ul li a:hover {
 
 @media screen and (max-width: 600px) {
   .third-col ul a {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-bottom: 30px;
   }
 }

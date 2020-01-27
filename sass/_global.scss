@@ -36,3 +36,27 @@ $breakpoints: (
     @content;
   }
 }
+.email-address-error {
+  font-size: 0.68rem;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  margin: auto;
+  color: #ff5263 !important;
+  text-align: left;
+  margin-bottom: 80px;
+  display: none;
+}
+.active {
+  display: block;
+}
+@media screen and (max-width: 850px) {
+  .email-address-error {
+    top: 30px;
+    font-size: 0.68rem;
+    width: 90%;
+    margin: auto;
+    color: #ff5263;
+    text-align: left;
+  }
+}

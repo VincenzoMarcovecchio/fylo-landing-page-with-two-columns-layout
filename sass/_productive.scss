@@ -19,13 +19,13 @@
     content: "";
     height: 10vh;
     width: 100%;
-    background-image: url(/images/bg-curve-desktop.svg);
+    background-image: url(../images/bg-curve-desktop.svg);
     background-position: center;
     background-size: cover;
     position: absolute;
     top: -50px;
     @include breakpoint(small) {
-      background-image: url(/images/bg-curve-mobile.svg);
+      background-image: url(../images/bg-curve-mobile.svg);
       background-position: center;
       background-size: cover;
       height: 9vh;
@@ -112,14 +112,6 @@
 
     .container {
       display: inline-block;
-
-      // grid-template-columns: repeat(auto-fit, minmax(50px 200px));
-      // grid-template-areas:
-      //  "picture name"
-      //  "picture info";
-      //grid-template-rows: repeat(2, (35px));
-      //grid-gap: 9px;
-      //height: 60px;
 
       .cust-name {
         font-weight: 800;
