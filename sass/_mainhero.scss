@@ -4,7 +4,7 @@
   grid-template-columns: repeat(2, minmax(240px, 1fr));
   font-family: $primaryFont;
   grid-template-areas: "text-area image";
-
+  align-items: center;
   @include breakpoint(small) {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -65,7 +65,9 @@
     min-width: 230px;
     margin-right: 20px;
     border-radius: 3px;
-    border: 1px solid $lightGray;
+    border: 0;
+    border-bottom: 2px solid $lightGray;
+    transition: 0.1s ease-in;
 
     @include breakpoint(small) {
       width: 90%;
@@ -73,9 +75,33 @@
       height: 35px;
     }
   }
-  input::placeholder {
-    color: $lightGray;
+
+  input:focus {
+    border-bottom-color: $brightBlue;
+    outline: none;
   }
+
+  label {
+    position: absolute;
+    top: 11px;
+    display: inline-block;
+    left: 0;
+    font-size: 17px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    @include breakpoint(small) {
+      left: 25px;
+    }
+  }
+
+  input:focus + label {
+    color: $brightBlue;
+    transform: translateY(-30px);
+  }
+  input:valid + label {
+    color: $brightBlue;
+    transform: translateY(-30px);
+  }
+
   button {
     cursor: pointer;
     padding: 2px 20px 2px 20px;

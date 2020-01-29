@@ -43,11 +43,46 @@
       border-radius: 3px;
       border: 1px solid $lightGray;
       font-size: 0.7rem;
+      border: 0;
+      border-bottom: 2px solid $lightGray;
+      transition: 0.1s ease-in;
+
+      @include breakpoint(small) {
+        margin-top: 10px;
+      }
     }
-    input::placeholder {
-      color: $lightGray;
-      font-size: 0.9rem;
+
+    input:focus {
+      border-bottom-color: $brightBlue;
+      outline: none;
     }
+
+    label {
+      position: absolute;
+      top: 11px;
+      left: 5px;
+      font-size: 20px;
+      transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      @include breakpoint(small) {
+        top: 20px;
+      }
+    }
+
+    input:focus + label {
+      color: #fff;
+      transform: translateY(-38px);
+      @include breakpoint(small) {
+        transform: translateY(-32px);
+      }
+    }
+    input:valid + label {
+      color: #fff;
+      transform: translateY(-38px);
+      @include breakpoint(small) {
+        transform: translateY(-32px);
+      }
+    }
+
     button {
       height: 40px;
       width: fit-content;

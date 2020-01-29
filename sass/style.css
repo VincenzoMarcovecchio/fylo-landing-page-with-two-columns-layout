@@ -112,6 +112,9 @@ nav ul li a:hover {
       grid-template-columns: repeat(2, minmax(240px, 1fr));
   font-family: "Raleway", sans-serif;
       grid-template-areas: "text-area image";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -198,7 +201,10 @@ nav ul li a:hover {
   min-width: 230px;
   margin-right: 20px;
   border-radius: 3px;
-  border: 1px solid #bfbfbf;
+  border: 0;
+  border-bottom: 2px solid #bfbfbf;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
 }
 
 @media screen and (max-width: 600px) {
@@ -209,20 +215,37 @@ nav ul li a:hover {
   }
 }
 
-.container1 input::-webkit-input-placeholder {
-  color: #bfbfbf;
+.container1 input:focus {
+  border-bottom-color: #3065f8;
+  outline: none;
 }
 
-.container1 input:-ms-input-placeholder {
-  color: #bfbfbf;
+.container1 label {
+  position: absolute;
+  top: 11px;
+  display: inline-block;
+  left: 0;
+  font-size: 17px;
+  -webkit-transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.container1 input::-ms-input-placeholder {
-  color: #bfbfbf;
+@media screen and (max-width: 600px) {
+  .container1 label {
+    left: 25px;
+  }
 }
 
-.container1 input::placeholder {
-  color: #bfbfbf;
+.container1 input:focus + label {
+  color: #3065f8;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+.container1 input:valid + label {
+  color: #3065f8;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
 }
 
 .container1 button {
@@ -500,26 +523,62 @@ nav ul li a:hover {
   border-radius: 3px;
   border: 1px solid #bfbfbf;
   font-size: 0.7rem;
+  border: 0;
+  border-bottom: 2px solid #bfbfbf;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
 }
 
-.footer-upper .container2 input::-webkit-input-placeholder {
-  color: #bfbfbf;
-  font-size: 0.9rem;
+@media screen and (max-width: 600px) {
+  .footer-upper .container2 input {
+    margin-top: 10px;
+  }
 }
 
-.footer-upper .container2 input:-ms-input-placeholder {
-  color: #bfbfbf;
-  font-size: 0.9rem;
+.footer-upper .container2 input:focus {
+  border-bottom-color: #3065f8;
+  outline: none;
 }
 
-.footer-upper .container2 input::-ms-input-placeholder {
-  color: #bfbfbf;
-  font-size: 0.9rem;
+.footer-upper .container2 label {
+  position: absolute;
+  top: 11px;
+  left: 5px;
+  font-size: 20px;
+  -webkit-transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.footer-upper .container2 input::placeholder {
-  color: #bfbfbf;
-  font-size: 0.9rem;
+@media screen and (max-width: 600px) {
+  .footer-upper .container2 label {
+    top: 20px;
+  }
+}
+
+.footer-upper .container2 input:focus + label {
+  color: #fff;
+  -webkit-transform: translateY(-38px);
+          transform: translateY(-38px);
+}
+
+@media screen and (max-width: 600px) {
+  .footer-upper .container2 input:focus + label {
+    -webkit-transform: translateY(-32px);
+            transform: translateY(-32px);
+  }
+}
+
+.footer-upper .container2 input:valid + label {
+  color: #fff;
+  -webkit-transform: translateY(-38px);
+          transform: translateY(-38px);
+}
+
+@media screen and (max-width: 600px) {
+  .footer-upper .container2 input:valid + label {
+    -webkit-transform: translateY(-32px);
+            transform: translateY(-32px);
+  }
 }
 
 .footer-upper .container2 button {

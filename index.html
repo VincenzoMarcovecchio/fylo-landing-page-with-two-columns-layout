@@ -49,18 +49,14 @@
           and co-workers.
         </p>
 
-        <div class="container1">
-          <input
-            class="email"
-            type="email"
-            name="email"
-            placeholder="Enter your email here"
-          />
+        <form class="container1">
+          <input class="email" type="email" name="email" required />
+          <label>Email</label>
           <p class="email-address-error">
             Please provide a valid email address
           </p>
-          <button onclick="validateInput()">Get Started</button>
-        </div>
+          <button type="submit">Get Started</button>
+        </form>
       </div>
       <img src="images/illustration-1.svg" alt="illustration-hero" />
     </section>
@@ -127,18 +123,15 @@
           be happy to help you.
         </p>
       </div>
-      <div class="container2">
-        <input
-          type="email"
-          name="email"
-          class="email"
-          placeholder="email@example.com"
-        />
+      <form class="container container2">
+        <input type="email" name="email" class="email" required /><label
+          >Email</label
+        >
         <p class="email-address-error">
           Please provide a valid email address
         </p>
-        <button onclick="validateInput()">Get Started For Free</button>
-      </div>
+        <button type="submit">Get Started For Free</button>
+      </form>
     </section>
     <footer class="footer">
       <div class="first-col">
@@ -177,6 +170,6 @@
         <a href="#"><i class="fab fa-instagram"></i></a>
       </div>
     </footer>
-    <script src="app.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
